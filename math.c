@@ -2,6 +2,7 @@
 Author:Jannatun Naher*/
 
 #include <msp430.h> 
+#include <math.h>
 
 int cal_add (int a, int b);
 int cal_sub (int a, int b);
@@ -30,9 +31,8 @@ int main(void)
     //mult = num1 * num2;  // Calculate the product of 'num1' and 'num2'.
     //div = (float)num1 / num2;   // Calculate the division of 'num1' by 'num2' and cast the result to a float.
     mod = num1 % num2;   // Calculate the modulus of 'num1' and 'num2'.
-    power = num1*num1*num1*num1*num1; //// Calculate powr of 'num1' is 'num2'.
-
-
+    power = pow(num1,num2); //// Calculate power of 'num1' is 'num2'.
+    //power = num1*num1*num1*num1*num1;
     while(1);
 
     return 0;   // Return 0 to indicate successful execution of the program.
